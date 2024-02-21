@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwopLight", "PwopLight\PwopLight\PwopLight.csproj", "{D2DD6DE2-AE10-4BB0-884F-8F094A8ED536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PwopLight.Client", "PwopLight\PwopLight.Client\PwopLight.Client.csproj", "{88C78258-6A6F-4536-873D-54773A68F5B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2DD6DE2-AE10-4BB0-884F-8F094A8ED536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DD6DE2-AE10-4BB0-884F-8F094A8ED536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DD6DE2-AE10-4BB0-884F-8F094A8ED536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DD6DE2-AE10-4BB0-884F-8F094A8ED536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88C78258-6A6F-4536-873D-54773A68F5B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C78258-6A6F-4536-873D-54773A68F5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C78258-6A6F-4536-873D-54773A68F5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C78258-6A6F-4536-873D-54773A68F5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47F3B915-0B7B-4699-8D77-D319DA87A3E6}
+	EndGlobalSection
+EndGlobal

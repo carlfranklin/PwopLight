@@ -1,0 +1,43 @@
+﻿@page "/"
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IJSRuntime jsRuntime
+@using System.Text.Json
+@using System.Text.Json.Serialization
+
+<input type="color" @bind="CurrentColor" @bind:event="oninput" />
+
+@code {
+
+    private string currentColor = "#FFFFFF";
+    private string CurrentColor
+    {
+        get => currentColor;
+        set
+        {
+            if (currentColor != value)
+            {
+                currentColor = value;
+                new Task(async () =>
+                {
+                    await SaveSettings();
+                }).Start();
+            }
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            currentColor = await localStorage.GetItemAsync<string>("PwopLightColor") ?? "#FFFFFF";
+            await jsRuntime.InvokeVoidAsync("SetBodyColor", currentColor);
+            StateHasChanged();
+        }
+    }
+
+    private async Task SaveSettings()
+    {
+        await jsRuntime.InvokeVoidAsync("SetBodyColor", currentColor);
+        await localStorage.SetItemAsync("PwopLightColor", currentColor);
+    }
+}
